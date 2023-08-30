@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Detail partenaire')
+@section('title', 'Detail Consultant')
 
-@section("soustitre", "Detail partenaire")
+@section("soustitre", "Detail Consultant")
 
 @section('contents')
 <section>
@@ -12,7 +12,7 @@
                 <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
                         <li class="breadgitcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>/
-                        <li class="breadgitcrumb-item"><a href="{{ route('partenaire.index') }}">Detail partenaires</a>
+                        <li class="breadgitcrumb-item"><a href="">Detail consultant</a>
                         </li>/
                     </ol>
                 </nav>
@@ -70,48 +70,63 @@
             <hr> --}}
 
             <div class="container">
-                <div class="card p-0">
-
-                    <div class="card p-3">
-                        <ul class="list-group">
-                            <li class="list-group-item">Nom de l'entreprise: <strong>{{ $partenaire->nom_entreprise
-                                    }}</strong> </li>
-                            <li class="list-group-item">Pays: <strong>{{ $partenaire->pays->nom }}</strong></li>
-                            <li class="list-group-item">Site web: <strong>{{ $partenaire->site_web_entreprise
-                                    }}</strong></li>
-                            <li class="list-group-item">Indicatif numero: <strong>{{
-                                    $partenaire->indicatif_numero_telephone }}</strong>
-                            </li>
-                            <li class="list-group-item">Telephone 1: <strong>{{ $partenaire->telephone_entreprise_1 }}</strong></li>
-                            <li class="list-group-item">Telephone 2: <strong>{{ $partenaire->telephone_entreprise_2 }}</strong></li>
-                            <li class="list-group-item">Nom 1: <strong>{{ $partenaire->nom_1 }}</strong></li>
-                            <li class="list-group-item">Prenom 1: <strong>{{ $partenaire->prenom_1 }}</strong></li>
-                            <li class="list-group-item">Contact 1: <strong>{{ $partenaire->prenom_1 }}</strong></li>
-                            <li class="list-group-item">Email 2: <strong>{{ $partenaire->email_1 }}</strong></li>
-                            <li class="list-group-item">Nom 2: <strong>{{ $partenaire->nom_2 }}</strong></li>
-                            <li class="list-group-item">Prenom 2: <strong>{{ $partenaire->prenom_2 }}</strong></li>
-                            <li class="list-group-item">Contact 2: <strong>{{ $partenaire->prenom_1 }}</strong></li>
-                            <li class="list-group-item">Email 3: <strong>{{ $partenaire->email_3 }}</strong></li>
-                            <li class="list-group-item">Nom 3: <strong>{{ $partenaire->nom_3 }}</strong></li>
-                            <li class="list-group-item">Prenom 3: <strong>{{ $partenaire->prenom_3 }}</strong></li>
-                            <li class="list-group-item">Contact 3: <strong>{{ $partenaire->contact_3 }}</strong></li>
-                            <li class="list-group-item">Domaine d'activité: <strong>{{ $partenaire->domaine_activite
-                                    }}</strong></li>
-                            <li class="list-group-item">Solution 1: <strong>{{ $partenaire->solution_1 }}</strong></li>
-                            <li class="list-group-item">Description solution 1: <strong>{{
-                                    $partenaire->description_solution_1 }}</strong>
-                            </li>
-                            <li class="list-group-item">Solution 2: <strong>{{ $partenaire->solution_2 }}</strong></li>
-                            <li class="list-group-item">Description solution 2: <strong>{{
-                                    $partenaire->description_solution_2 }}</strong>
-                            </li>
-                            <li class="list-group-item">Autres Solution: <strong>{{ $partenaire->prenom_1 }}</strong>
-                            </li>
-
-                        </ul>
-                    </div>
-
+                <div class="card p-4">
+                    <ul class="list-group">
+                        <li class="list-group-item">Nom: <strong>{{ $consultant->nom }}</strong></li>
+                        <li class="list-group-item">Prénom: <strong>{{ $consultant->prenom }}</strong></li>
+                        <li class="list-group-item">Date de naissance: <strong>{{ $consultant->date_naissance
+                                }}</strong></li>
+                        <li class="list-group-item">Email 1: <strong>{{ $consultant->email_1 }}</strong></li>
+                        <li class="list-group-item">Email 2: <strong>{{ $consultant->email_2 }}</strong></li>
+                        <li class="list-group-item">Telephone 1: <strong>{{ $consultant->telephone_1 }}</strong>
+                        </li>
+                        <li class="list-group-item">Telephone 2: <strong>{{ $consultant->telephone_2 }}</strong>
+                        </li>
+                        <li class="list-group-item">Niveau de diplôme 1: <strong>{{ $consultant->niveau_diplome_1
+                                }}</strong></li>
+                        <li class="list-group-item">Diplôme 1: <strong>{{ $consultant->diplome_1 }}</strong></li>
+                        <li class="list-group-item">Année d'obtention du diplôme 1: <strong>{{
+                                $consultant->annee_obtention_diplome_1 }}</strong></li>
+                        <li class="list-group-item">Niveau de diplôme 2: <strong>{{ $consultant->niveau_diplome_2
+                                }}</strong></li>
+                        <li class="list-group-item">Diplôme 2: <strong>{{ $consultant->diplome_2 }}</strong></li>
+                        <li class="list-group-item">Année d'obtention du diplôme 2: <strong>{{
+                                $consultant->annee_obtention_diplome_2 }}</strong></li>
+                        <li class="list-group-item">Autre diplômes: <strong>{{ $consultant->autre_diplomes
+                                }}</strong></li>
+                        <li class="list-group-item">Projet realiser: <strong>{{ $consultant->projet_realiser
+                                }}</strong></li>
+                        <li class="list-group-item">Niveau diplôme:
+                            <strong>
+                                @foreach ($consultant->niveau_diplomes as $diplome)
+                                {{ $diplome->nom }},
+                                @endforeach
+                            </strong>
+                        </li>
+                        <li class="list-group-item">Profils:
+                            <strong>
+                                @foreach ($consultant->profils as $profil)
+                                {{ $profil->nom }},
+                                @endforeach
+                            </strong>
+                        </li>
+                        <li class="list-group-item">Niveau diplôme:
+                            <strong>
+                                @foreach ($consultant->domaine_competences as $competence)
+                                {{ $competence->nom }},
+                                @endforeach
+                            </strong>
+                        </li>
+                        <li class="list-group-item">Domaine de competence:
+                            <strong>
+                                @foreach ($consultant->outil_techonologies as $techno)
+                                {{ $techno->nom }},
+                                @endforeach
+                            </strong>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </div>

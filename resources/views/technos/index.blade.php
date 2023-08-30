@@ -22,10 +22,10 @@
       <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0"></h1>
         <div>
-          {{-- <a href="{{ route("categorie.create") }}" class="btn btn-primary"><i class="fa-sharp fa-plus"></i> Ajouter une categorie</a> --}}
+          {{-- <a href="{{ route("categorie.create") }}" class="btn btn-outline-primary"><i class="fa-sharp fa-plus"></i> Ajouter une categorie</a> --}}
 
                   <!-- Bouton pour ouvrir le modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutCategorie">
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalAjoutCategorie">
           <i class="fa-sharp fa-plus"></i> Ajouter une techno/outil
         </button>
 
@@ -52,7 +52,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" class="btn btn-outline-primary">Ajouter</button>
                   </div>
                 </form>
               </div>
@@ -78,7 +78,7 @@
                     <form action="" class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0 mb-3">
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Search for..." name="query" value="" />
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </form>
                 {{-- <h5 class="card-title">Bordered Table</h5> --}}
@@ -117,7 +117,7 @@
                                       </div>
                                       <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                          <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                          <button type="submit" class="btn btn-outline-primary">Enregistrer</button>
                                       </div>
                                   </form>
                               </div>
@@ -127,8 +127,8 @@
                       <tr>
                         <td>{{ $techno->nom }}</td>
                         <td class="pull-right">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditerCategorie{{ $techno->id }}">
-                            <i class="fa-sharp fa-plus"></i> Éditer
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalEditerCategorie{{ $techno->id }}">
+                            <i class="fa-sharp fa-pencil"></i> Éditer
                           </button>
                           <a href="{{ route("techno.destroy", $techno->id) }}" class="btn btn-outline-danger" ata-toggle="modal" onclick="return confirm('Etes vous sûr ?')"><i class="fa-sharp fa-trash"></i> Supprimer</a>
                         </td>

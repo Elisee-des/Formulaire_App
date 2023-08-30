@@ -24,7 +24,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
     
-            return redirect()->route("dashboard");
+            return redirect()->route("consultant.index");
         } else {
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed')

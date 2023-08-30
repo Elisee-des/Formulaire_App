@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('consultant_competence', function (Blueprint $table) {
             $table->id();
             $table->foreignId("consultant_id")->nullable()->references('id')->on('consultants');
-            $table->foreignId("domaine_completence_id")->nullable()->references('id')->on('domaine_competences');
-
+            $table->foreignId("domaine_competence_id")->nullable()->references('id')->on('domaine_competences');
             $table->timestamps();
         });
     }

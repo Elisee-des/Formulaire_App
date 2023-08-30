@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('consultant_techno', function (Blueprint $table) {
             $table->id();
             $table->foreignId("consultant_id")->nullable()->references('id')->on('consultants');
-            $table->foreignId("outil_techno_maitriser_id")->nullable()->references('id')->on('consultants');
+            $table->foreignId("outil_technologie_id")->nullable()->references('id')->on('outil_technologies');
             $table->timestamps();
         });
     }

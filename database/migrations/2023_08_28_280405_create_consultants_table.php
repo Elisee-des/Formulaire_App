@@ -28,11 +28,11 @@ return new class extends Migration
             $table->string("annee_obtention_diplome_2")->nullable();
             $table->longText("autre_diplomes")->nullable();
             $table->mediumText("projet_realiser")->nullable();
-            $table->foreignId("domaine_competence_id")->nullable()->references('id')->on('domaine_competences');
-            $table->foreignId("outil_techno_maitriser_id")->nullable()->references('id')->on('outil_technologies');
+            // $table->foreignId("domaine_competence_id")->nullable()->references('id')->on('domaine_competences');
+            // $table->foreignId("outil_techno_maitriser_id")->nullable()->references('id')->on('outil_technologies');
             $table->foreignId("pays_id")->nullable()->references('id')->on('pays');
-            $table->foreignId("profil_consultant_id")->nullable()->references('id')->on('profils');
-            $table->foreignId("niveau_diplome_id")->nullable()->references('id')->on('niveau_diplomes');
+            // $table->foreignId("profil_consultant_id")->nullable()->references('id')->on('profils');
+            // $table->foreignId("niveau_diplome_id")->nullable()->references('id')->on('niveau_diplomes');
             $table->timestamps();
         });
     }

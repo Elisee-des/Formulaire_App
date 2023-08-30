@@ -103,11 +103,10 @@ class HomeController extends Controller
         $selectedDiplomeIds = $request->input('niveau_diplome_id', []);
 
         $consultant = new Consultant();
-        // dd($request->all());
 
         $consultant->nom = $request->nom;
         $consultant->prenom = $request->prenom;
-        $consultant->annee_naissance = $request->annee_naissance;
+        $consultant->date_naissance = $request->date_naissance;
         $consultant->email_1 = $request->email_1;
         $consultant->email_2 = $request->email_2;
         $consultant->telephone_1 = $request->telephone_1;
@@ -119,16 +118,12 @@ class HomeController extends Controller
         $consultant->diplome_2 = $request->diplome_2;
         $consultant->annee_obtention_diplome_2 = $request->annee_obtention_diplome_2;
         $consultant->pays_id = $request->pays_id;
-        $consultant->domaine_competence_id = $request->domaine_competence_id;
-        $consultant->niveau_diplome_id = $request->niveau_diplome_id;
-        $consultant->outil_techno_maitriser_id = $request->outil_techno_maitriser_id;
+        // $consultant->domaine_competence_id = $request->domaine_competence_id;
+        // $consultant->niveau_diplome_id = $request->niveau_diplome_id;
+        // $consultant->outil_techno_maitriser_id = $request->outil_techno_maitriser_id;
         $consultant->autre_diplomes = $request->autre_diplomes;
-        $consultant->profil_consultant_id = $request->profil_consultant_id;
+        // $consultant->profil_consultant_id = $request->profil_consultant_id;
         $consultant->projet_realiser = $request->projet_realiser;
-        json_encode($selectedProfileIds);
-        json_encode($selectedTechnoIds);
-        json_encode($selectedDiplomeIds);
-        json_encode($selectedCompetenceIds);
         $consultant->save();
         // dd($consultant);
         
@@ -152,7 +147,7 @@ class HomeController extends Controller
         foreach ($selectedTechnoIds as $technoId) {
             $techno = OutilTechnologie::find($technoId);
             if ($techno) {
-                $consultant->outil_techno_maitriser()->attach($techno);
+                $consultant->outil_techonologies()->attach($techno);
             }
         }
 

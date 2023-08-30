@@ -10,11 +10,7 @@ class Consultant extends Model
     use HasFactory;
 
     protected $fillable = [
-        'domaine_competence_id',
-        'profil_consultant_id',
-        'outil_techno_maitriser_id',
         'pays_id',
-        'niveau_diplome_id',
         'nom',
         'prenom',
         'date_naissance',

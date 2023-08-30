@@ -22,7 +22,7 @@
       <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0"></h1>
         <div>
-          {{-- <a href="{{ route("consultant.create") }}" class="btn btn-primary"><i class="fa-sharp fa-plus"></i> Ajouter une consultant</a> --}}
+          {{-- <a href="{{ route("consultant.create") }}" class="btn btn-outline-primary"><i class="fa-sharp fa-plus"></i> Ajouter une consultant</a> --}}
 
                   <!-- Bouton pour ouvrir le modal -->
 
@@ -49,7 +49,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" class="btn btn-outline-primary">Ajouter</button>
                   </div>
                 </form>
               </div>
@@ -122,7 +122,7 @@
                     <form action="" class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0 mb-3">
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Search for..." name="query" value="" />
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </form>
                 {{-- <h5 class="card-title">Bordered Table</h5> --}}
@@ -163,7 +163,7 @@
                                       </div>
                                       <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                          <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                          <button type="submit" class="btn btn-outline-primary">Enregistrer</button>
                                       </div>
                                   </form>
                               </div>
@@ -176,10 +176,10 @@
                         <td>{{ $consultant->telephone_1 }}</td>
                         <td class="pull-right">
                           {{-- <a href="{{ route("consultant.edit", $consultant->id) }}" class="btn btn-outline-primary" ata-toggle="modal" data-target="#modalEditionconsultant"><i class="fa-sharp fa-pencil"></i> Editer</a> --}}
-                          {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditerconsultant{{ $consultant->id }}">
+                          {{-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalEditerconsultant{{ $consultant->id }}">
                             <i class="fa-sharp fa-plus"></i> Éditer
                           </button> --}}
-                          <a href="{{ route("consultant.show", $consultant->id) }}" class="btn btn-outline-dark"><i class="fa-sharp fa-circle-info"></i> Détail</a>
+                          <a href="{{ route("consultant.show", $consultant->id) }}" class="btn btn-outline-dark"><i class="fa-sharp fa-pencil"></i> Détail</a>
 
                         </td>
                       </tr>

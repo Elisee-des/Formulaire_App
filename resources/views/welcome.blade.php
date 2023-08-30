@@ -45,7 +45,7 @@
 
         <div>
             @if (auth()->user())
-            <a href="{{ route('dashboard') }}" class="btn btn-outline-primary" type="button">Mon compte</a>
+            <a href="{{ route('consultant.index') }}" class="btn btn-outline-primary" type="button">Mon compte</a>
             <a href="{{ route('logout') }}" class="btn btn-outline-secondary" type="button">Deconnexion</a>
             @else
             <a class="btn btn-outline-primary" href="{{ route('login.index') }}">Connexion</a>
@@ -80,39 +80,36 @@
                                     <fieldset>
                                         <div class="row mb-3">
                                             <div class="col form-group md-2">
-                                                <label for="nom">Entrez votre nom <span
-                                                        class="text-danger">*</span></label>
+                                                <label for="nom">Nom <span class="text-danger">*</span></label>
                                                 <input type="text" name="nom" required class="form-control" id="nom"
-                                                    placeholder="Ouedraogo">
+                                                    placeholder="Entrez votre nom">
                                             </div>
 
                                             <div class="col form-group md-2">
-                                                <label for="nom">Entrez votre prénom <span
-                                                        class="text-danger">*</span></label>
-                                                <input type="text" name="prenom" required class="form-control" id="nom"
-                                                    placeholder="Pierre">
+                                                <label for="nom">Prénom <span class="text-danger">*</span></label>
+                                                <input type="text" name="Entrez votre prenom" required
+                                                    class="form-control" id="nom" placeholder="Pierre">
                                             </div>
                                         </div>
 
                                         <div class="form-group mb-2">
-                                            <label for="nom">Entrez votre date de naissance</label>
-                                            <input type="text" name="annee_naissance" class="form-control"
-                                                id="date_naissance" placeholder="19 fevrier 1997">
+                                            <label for="nom">Date de naissance</label>
+                                            <input type="text" name="date_naissance" class="form-control"
+                                                id="date_naissance" placeholder="Entrez votre date de naissance">
                                         </div>
 
 
                                         <div class="row mb-3">
                                             <div class="col form-group mb-2">
-                                                <label for="email_1">Entrez votre mail 1 <span
-                                                        class="text-danger">*</span></label>
+                                                <label for="email_1">Email 1 <span class="text-danger">*</span></label>
                                                 <input type="email" name="email_1" required class="form-control"
-                                                    id="email_1" placeholder="odgpiere@gmail.com">
+                                                    id="email_1" placeholder="Entrez votre 1er email">
                                             </div>
 
                                             <div class="col form-group mb-2">
-                                                <label for="email_2">Entrez votre mail 2</label>
+                                                <label for="email_2">Email 2</label>
                                                 <input type="email" name="email_2" class="form-control" id="email_2"
-                                                    placeholder="odgpiere2@gmail.com">
+                                                    placeholder="Entrez votre 2nd email">
                                             </div>
                                         </div>
 
@@ -120,53 +117,53 @@
                                             <div class="col form-group mb-2">
                                                 <label for="nom">Telephone 1</label>
                                                 <input type="text" name="telephone_1" class="form-control" id="nom"
-                                                    placeholder="Pierre">
+                                                    placeholder="Votre numero de telephone 1">
                                             </div>
 
                                             <div class="col form-group mb-2">
                                                 <label for="nom">Telephone 2</label>
                                                 <input type="text" name="telephone_2" class="form-control" id="nom"
-                                                    placeholder="Pierre">
+                                                    placeholder="Votre numero de telephone 2">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <div class="col form-group mb-2">
-                                                <label for="nom">Entrez niveau diplome 1</label>
+                                                <label for="nom">Niveau diplôme 1</label>
                                                 <input type="text" name="niveau_diplome_1" class="form-control" id="nom"
-                                                    placeholder="Pierre">
+                                                    placeholder="Entrez niveau diplome 1">
                                             </div>
 
                                             <div class="col form-group mb-2">
-                                                <label for="nom">Entrez votre diplome 1</label>
+                                                <label for="nom">Entrez votre diplôme 1</label>
                                                 <input type="text" name="diplome_1" class="form-control" id="nom"
-                                                    placeholder="Pierre">
+                                                    placeholder="Entrez diplome 1">
                                             </div>
 
                                             <div class="col form-group mb-2">
-                                                <label for="nom">Entrez votre année d'obtention du diplome 1</label>
+                                                <label for="nom">Année diplôme 1</label>
                                                 <input type="text" name="annee_obtention_diplome_1" class="form-control"
-                                                    id="nom" placeholder="Pierre">
+                                                    id="nom" placeholder="Entrez votre année d'obtention du diplôme 1">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <div class="col form-group mb-2">
-                                                <label for="nom">Niveau diplome 2</label>
+                                                <label for="nom">Niveau diplôme 2</label>
                                                 <input type="text" name="niveau_diplome_2" class="form-control" id="nom"
-                                                    placeholder="Niveau du diplome 2">
+                                                    placeholder="Entrez votre niveau du diplome 2">
                                             </div>
 
                                             <div class="col form-group mb-2">
                                                 <label for="nom">Entrez votre diplôme 2</label>
                                                 <input type="text" name="diplome_2" class="form-control" id="nom"
-                                                    placeholder="Diplome 2">
+                                                    placeholder="Entrez votre diplome 2">
                                             </div>
 
                                             <div class="col form-group mb-2">
-                                                <label for="nom">Entrez votre année d'obtention du diplome 2</label>
+                                                <label for="nom">Année diplôme 2</label>
                                                 <input type="text" name="annee_obtention_diplome_2" class="form-control"
-                                                    id="nom" placeholder="Pierre">
+                                                    id="nom" placeholder="Entrez année d'obtention">
                                             </div>
                                         </div>
 
@@ -175,54 +172,55 @@
                                             <label for="selection">Chosir votre pays</label>
                                             <select id="selection" name="pays_id" class="form-control">
                                                 <option value="">Aucun</option>
-                                                <optgroup label="Groupe d'options 1">
-                                                    @foreach ($pays as $pay)
+                                                @foreach ($pays as $pay)
                                                 <option value="{{ $pay->id }}" data-badge="">{{ $pay->nom }}</option>
                                                 @endforeach
-                                                </optgroup>
                                             </select>
                                         </div>
 
                                         <div class="form-group mb-2">
                                             <label for="selection">Votre domaine de compétence <span
-                                                class="text-danger">*</span></label>
-                                                <select class="js-select2" name="domaine_competence_id[]"
+                                                    class="text-danger">*</span></label>
+                                            <select class="js-select2" name="domaine_competence_id[]"
                                                 multiple="multiple">
                                                 @foreach ($competences as $competence)
-                                                <option value="{{ $competence->id }}" data-badge="">{{ $competence->nom }}</option>
+                                                <option value="{{ $competence->id }}" data-badge="">{{ $competence->nom
+                                                    }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
 
                                         <div class="form-group mb-2">
                                             <label for="selection">Outil ou technologie maitriser<span
-                                                class="text-danger">*</span></label>
-                                                <select class="js-select2" name="outil_techno_maitriser_id[]"
+                                                    class="text-danger">*</span></label>
+                                            <select class="js-select2" name="outil_techno_maitriser_id[]"
                                                 multiple="multiple">
                                                 @foreach ($technos as $techno)
-                                                <option value="{{ $techno->id }}" data-badge="">{{ $techno->nom }}</option>
+                                                <option value="{{ $techno->id }}" data-badge="">{{ $techno->nom }}
+                                                </option>
                                                 @endforeach
                                             </select>
                                         </div>
 
                                         <div class="form-group mb-2">
                                             <label for="selection">Choisir votre profiil<span
-                                                class="text-danger">*</span></label>
-                                                <select class="js-select2" name="profil_consultant_id[]"
+                                                    class="text-danger">*</span></label>
+                                            <select class="js-select2" name="profil_consultant_id[]"
                                                 multiple="multiple">
                                                 @foreach ($profils as $profil)
-                                                <option value="{{ $profil->id }}" data-badge="">{{ $profil->nom }}</option>
+                                                <option value="{{ $profil->id }}" data-badge="">{{ $profil->nom }}
+                                                </option>
                                                 @endforeach
                                             </select>
                                         </div>
 
                                         <div class="form-group mb-2">
                                             <label for="selection">Choisir votre niveau de diplôme<span
-                                                class="text-danger">*</span></label>
-                                                <select class="js-select2" name="niveau_diplome_id[]"
-                                                multiple="multiple">
+                                                    class="text-danger">*</span></label>
+                                            <select class="js-select2" name="niveau_diplome_id[]" multiple="multiple">
                                                 @foreach ($diplomes as $diplome)
-                                                <option value="{{ $diplome->id }}" data-badge="">{{ $diplome->nom }}</option>
+                                                <option value="{{ $diplome->id }}" data-badge="">{{ $diplome->nom }}
+                                                </option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -267,10 +265,9 @@
                                 <fieldset>
                                     <div class="row mb-3">
                                         <div class="col form-group md-2">
-                                            <label for="nom">Entrez le nom de l'entreprise <span
-                                                    class="text-danger">*</span></label>
+                                            <label for="nom">Nom entreprise <span class="text-danger">*</span></label>
                                             <input type="text" name="nom_entreprise" required class="form-control"
-                                                id="nom" placeholder="Swith maker">
+                                                id="nom" placeholder="Entrez le nom de l'entreprise">
                                             @error('nom_entreprise')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -287,13 +284,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="col form-group mb-2">
-                                        <label for="email_1">Le site de l'entreprise</label>
-                                        <input type="email" name="site_web_entreprise" class="form-control" id="email_1"
-                                            placeholder="http://entreprise.com">
-                                        @error('site_web_entreprise')
-                                        <span class="invalid-feedback">{{ $message }}</span>
-                                        @enderror
+                                    <div class="row mb-3">
+                                        <div class="col form-group mb-2">
+                                            <label for="email_1">Site web</label>
+                                            <input type="email" name="site_web_entreprise" class="form-control"
+                                                id="email_1" placeholder="http://entreprise.com">
+                                            @error('site_web_entreprise')
+                                            <span class="invalid-feedback">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
 
 
@@ -312,10 +311,10 @@
 
                                     <div class="row mb-3">
                                         <div class="col form-group mb-2">
-                                            <label for="indicatif_numero_telephone">Entrez indicatif de numero de
-                                                telephone</label>
+                                            <label for="indicatif_numero_telephone">Indicatif</label>
                                             <input type="text" name="indicatif_numero_telephone" class="form-control"
-                                                id="indicatif_numero_telephone" placeholder="9932">
+                                                id="indicatif_numero_telephone" placeholder="Entrez indicatif de numero de
+                                                telephone">
                                             @error('indicatif_numero_telephone')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -323,7 +322,7 @@
                                         <div class="col form-group mb-2">
                                             <label for="nom">Telephone 1</label>
                                             <input type="text" name="telephone_entreprise_1" class="form-control"
-                                                id="nom" placeholder="Pierre">
+                                                id="nom" placeholder="Entrez votre telephone 1">
                                             @error('telephone_entreprise_1')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -332,7 +331,7 @@
                                         <div class="col form-group mb-2">
                                             <label for="nom">Telephone 2</label>
                                             <input type="text" name="telephone_entreprise_2" class="form-control"
-                                                id="nom" placeholder="Pierre">
+                                                id="nom" placeholder="Entrez votre telephone 2">
                                             @error('telephone_entreprise_2')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
@@ -344,7 +343,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="nom_1">Nom 1 <span class="text-danger">*</span></label>
                                                 <input type="text" name="nom_1" required class="form-control" id="nom_1"
-                                                    placeholder="Bicaba">
+                                                    placeholder="Entrez un nom 1">
                                                 @error('nom_1')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -354,7 +353,7 @@
                                                 <label for="prenom_1">Prénom 1 <span
                                                         class="text-danger">*</span></label>
                                                 <input type="text" name="prenom_1" required class="form-control"
-                                                    id="prenom_1" placeholder="Marcel">
+                                                    id="prenom_1" placeholder="Entrez un prénom 1">
                                                 @error('prenom_1')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -364,7 +363,7 @@
                                                 <label for="contact_1">Contact 1 <span
                                                         class="text-danger">*</span></label>
                                                 <input type="text" name="contact_1" required class="form-control"
-                                                    id="contact_1" placeholder="56677678">
+                                                    id="contact_1" placeholder="Entrez un contact 1">
                                                 @error('contact_1')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -373,7 +372,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="email_1">Email 1 <span class="text-danger">*</span></label>
                                                 <input type="email" name="email_1" required class="form-control"
-                                                    id="email_1" placeholder="e@gmail.com">
+                                                    id="email_1" placeholder="Entrez un email 1">
                                                 @error('email_1')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -384,7 +383,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="nom_2">Nom 2</label>
                                                 <input type="text" name="nom_2" class="form-control" id="nom_2"
-                                                    placeholder="Sawadogo">
+                                                    placeholder="Entrez un 2nd nom">
                                                 @error('nom_2')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -393,7 +392,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="prenom_2">Prénom 2</label>
                                                 <input type="text" name="prenom_2" class="form-control" id="prenom_2"
-                                                    placeholder="Pierre">
+                                                    placeholder="Entrez un 2nd prenom">
                                                 @error('prenom_2')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -402,7 +401,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="contact_2">Contact 2</label>
                                                 <input type="text" name="contact_2" class="form-control" id="contact_2"
-                                                    placeholder="7899876">
+                                                    placeholder="Entrez un 2nd contact">
                                                 @error('contact_2')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -411,7 +410,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="email_2">Email 2</label>
                                                 <input type="text" name="email_2" class="form-control" id="email_2"
-                                                    placeholder="a@gmail.com">
+                                                    placeholder="Entrez un 2nd email">
                                                 @error('email_2')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -422,7 +421,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="nom_3">Nom 3</label>
                                                 <input type="text" name="nom_3" class="form-control" id="nom_3"
-                                                    placeholder="Ouedraogo">
+                                                    placeholder="Entrez un 3eme nom">
                                                 @error('nom_3')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -431,7 +430,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="prenom_3">Prenom 3</label>
                                                 <input type="text" name="prenom_3" class="form-control" id="prenom_3"
-                                                    placeholder="Pierre">
+                                                    placeholder="Entrez un 3eme prenom">
                                                 @error('prenom_3')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -440,7 +439,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="contact_3">Contact 3</label>
                                                 <input type="text" name="contact_3" class="form-control" id="contact_3"
-                                                    placeholder="56785698">
+                                                    placeholder="Entrez un 3eme contact">
                                                 @error('contact_3')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -449,7 +448,7 @@
                                             <div class="form-group mb-2">
                                                 <label for="email_3">Email 3</label>
                                                 <input type="text" name="email_3" class="form-control" id="email_3"
-                                                    placeholder="a@gmail.com">
+                                                    placeholder="Entrez un 3eme email">
                                                 @error('email_3')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                                 @enderror
@@ -461,7 +460,7 @@
                         <div class="form-group mb-2 mt-1">
                             <label for="domaine_activite">Domaine d'activité <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" required name="domaine_activite"
-                                id="domaine_activite" placeholder="Developpement">
+                                id="domaine_activite" placeholder="Entrez le domaine d'activité">
                             @error('domaine_activite')
                             <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
@@ -472,7 +471,7 @@
                                 <div class="form-group mb-2 mt-1">
                                     <label for="solution_1">Solution 1 <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" required name="solution_1" id="solution_1"
-                                        placeholder="solution 1">
+                                        placeholder="Entrez ici la solution proposée">
                                     @error('solution_1')
                                     <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
@@ -482,7 +481,7 @@
                                 <div class="form-group mb-2 mt-1">
                                     <label for="bio">Description de la solution 1 <span
                                             class="text-danger">*</span></label>
-                                    <textarea class="form-control" required name="description_solution_1" id="bio"
+                                    <textarea class="form-control" required placeholder="Entrez la description de la solution" name="description_solution_1" id="bio"
                                         rows="2"></textarea>
                                     @error('description_solution_1')
                                     <span class="invalid-feedback">{{ $message }}</span>
@@ -493,7 +492,7 @@
                             <div class="col mb-3">
                                 <div class="form-group mb-2 mt-1">
                                     <label for="solution_1">Solution 2</label>
-                                    <input type="text" class="form-control" name="solution_2" id="solution_1"
+                                    <input type="text" class="form-control" placeholder="Entrez une 2nd solution" name="solution_2" id="solution_1"
                                         placeholder="solution 1">
                                     @error('solution_2')
                                     <span class="invalid-feedback">{{ $message }}</span>
@@ -503,7 +502,7 @@
 
                                 <div class="form-group mb-2 mt-1">
                                     <label for="description_solution_1">Description de la solution 2</label>
-                                    <textarea class="form-control" name="description_solution_2"
+                                    <textarea class="form-control" placeholder="Entrez ici la description de la seconde solution" name="description_solution_2"
                                         id="description_solution_2" rows="2"></textarea>
                                     @error('description_solution_2')
                                     <span class="invalid-feedback">{{ $message }}</span>
